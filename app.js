@@ -10,6 +10,7 @@ const cors = require('cors');
 const { config } = require('process');
 const cookieParser = require('cookie-parser');
 
+const compression = require('compression');
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
 const tourRouter = require('./routes/tourRoutes');
@@ -86,6 +87,7 @@ app.use(
   })
 );
 
+app.use(compression());
 // Test middleware
 app.use((req, res, next) => {
   req.requestTime = new Date().toISOString();

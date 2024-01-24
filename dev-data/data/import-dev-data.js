@@ -18,9 +18,9 @@ const tours = JSON.parse(
 const importData = async () => {
   try {
     await Tour.create(tours);
-    console.log('Data successfully loaded!');
+    // console.log('Data successfully loaded!');
   } catch (err) {
-    console.log(err);
+    // console.log(err);
   }
   process.exit();
 };
@@ -29,9 +29,9 @@ const importData = async () => {
 const deleteData = async () => {
   try {
     await Tour.deleteMany();
-    console.log('Data successfully deleted!');
+    // console.log('Data successfully deleted!');
   } catch (err) {
-    console.log(err);
+    // console.log(err);
   }
   process.exit();
 };
