@@ -1,6 +1,7 @@
 /* eslint-disable */
 import '@babel/polyfill';
 import { login, logout } from './login';
+import { updateSettings } from './updateSettings';
 
 // const locatoins = document.getElementById('map').dataset.locatoins;
 const loginForm = document.querySelector('.form--login');
